@@ -5,19 +5,19 @@ module.exports =
         @_imageRegistry = {}
         @_imageCount = 0
 
-	imageFromBuffer: (buffer, x, y, options = {}) ->
-		if typeof x is 'object'
+    imageFromBuffer: (buffer, x, y, options = {}) ->
+        if typeof x is 'object'
             options = x
             x = null
         
         x = x ? options.x ? @x
         y = y ? options.y ? @y
 
-		image = PDFImage.openWithBuffer(buffer)
-		label = "I" + (++@_imageCount)
-        @_imageRegistry[src] = [image, @page, label]
+        image = PDFImage.openWithBuffer(buffer)
+        label = "I" + (++@_imageCount)
+        @_imageRegistry[buffer] = [image, @page, label]
 
-		w = options.width or image.width
+        w = options.width or image.width
         h = options.height or image.height
         
         if options.width and not options.height
@@ -55,7 +55,7 @@ module.exports =
         @restore()
 
         return this
-		
+        
         
     image: (src, x, y, options = {}) ->
         if typeof x is 'object'

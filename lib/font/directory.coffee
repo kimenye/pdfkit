@@ -66,15 +66,16 @@ class Directory
                 
         return new Buffer(directory.data)
             
-    checksum = ([data...]) ->
-        while data.length % 4
-            data.push 0
-                
-        tmp = new Data(data)
-        sum = 0
-        for i in [0...data.length] by 4
-            sum += tmp.readUInt32()
-        
-        return sum & 0xFFFFFFFF
+	# Temporarily disabled. Coffee script is giving an error when compiling this
+    # checksum = ([data...]) ->
+    #         while data.length % 4
+    #             data.push 0
+    #                 
+    #         tmp = new Data(data)
+    #         sum = 0
+    #         for i in [0...data.length] by 4
+    #             sum += tmp.readUInt32()
+    #         
+    #         return sum & 0xFFFFFFFF
                     
 module.exports = Directory

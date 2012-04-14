@@ -2,16 +2,16 @@
   "name": "pdfkit-memory",
   "description": "A PDF generation library for Node.js",
   "keywords": ["pdf", "pdf writer", "pdf generator", "graphics", "document", "vector"],
-  "version": "0.1.7",
+  "version": "0.0.2",
   "homepage": "http://pdfkit.org/",
   "author": {
       "name": "Trevor Kimenye derived from work by Devon Govett",
-      "email": "devongovett@gmail.com",
-      "url": "http://badassjs.com/"
+      "email": "kimenye@gmail.com",
+      "url": "http://github.com/kimenye/pdfkit"
   },
   "repository": {
       "type": "git",
-      "url": "https://github.com/devongovett/pdfkit.git"
+      "url": "https://github.com/kimenye/pdfkit"
   },
   "bugs": "http://github.com/kimenye/pdfkit/issues",
   "directories": {
